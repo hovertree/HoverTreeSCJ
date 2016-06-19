@@ -1,10 +1,8 @@
-﻿using HoverTreeSCJ.SCJForms;
+﻿/* 何问起 http://hovertree.com/hovertreescj/ */
+using HoverTreeSCJ.SCJForms;
 using System;
 using System.Windows.Forms;
 using HoverTreeSCJ.SCJForms.TagForms;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
 using HoverTreeSCJ.SCJForms.ToolForms;
 
 namespace HoverTreeSCJ

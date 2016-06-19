@@ -67,7 +67,7 @@
             this.Controls.Add(this.checkBox_isHide);
             this.Controls.Add(this.button_getScreen);
             this.Name = "Form_GetScreen";
-            this.Text = "截屏";
+            this.Text = "截屏_何问起";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿/* 何问起 http://hovertree.com/hovertreescj/ */
+using System;
 using System.Windows.Forms;
 using HoverTree.HtBll;
 using HoverTree.HtModel;
