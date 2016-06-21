@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Base\HtSelectBase.cs" />
     <Compile Include="HtTagInfo.cs" />
+    <Compile Include="HtTagSelect.cs" />
     <Compile Include="UrlInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UrlSelect.cs" />

@@ -36,6 +36,7 @@
             this.tagAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.getScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tagListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip_hoverTree.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +58,8 @@
             this.sCJToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addToolStripMenuItem,
             this.listToolStripMenuItem,
-            this.tagAddToolStripMenuItem});
+            this.tagAddToolStripMenuItem,
+            this.tagListToolStripMenuItem});
             this.sCJToolStripMenuItem.Name = "sCJToolStripMenuItem";
             this.sCJToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
             this.sCJToolStripMenuItem.Text = "菜单";
@@ -65,21 +67,21 @@
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.addToolStripMenuItem.Text = "添加";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // listToolStripMenuItem
             // 
             this.listToolStripMenuItem.Name = "listToolStripMenuItem";
-            this.listToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.listToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.listToolStripMenuItem.Text = "查询";
             this.listToolStripMenuItem.Click += new System.EventHandler(this.listToolStripMenuItem_Click);
             // 
             // tagAddToolStripMenuItem
             // 
             this.tagAddToolStripMenuItem.Name = "tagAddToolStripMenuItem";
-            this.tagAddToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.tagAddToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.tagAddToolStripMenuItem.Text = "添加标签";
             this.tagAddToolStripMenuItem.Click += new System.EventHandler(this.tagAddToolStripMenuItem_Click);
             // 
@@ -94,9 +96,16 @@
             // getScreenToolStripMenuItem
             // 
             this.getScreenToolStripMenuItem.Name = "getScreenToolStripMenuItem";
-            this.getScreenToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.getScreenToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.getScreenToolStripMenuItem.Text = "保存截屏";
             this.getScreenToolStripMenuItem.Click += new System.EventHandler(this.getScreenToolStripMenuItem_Click);
+            // 
+            // tagListToolStripMenuItem
+            // 
+            this.tagListToolStripMenuItem.Name = "tagListToolStripMenuItem";
+            this.tagListToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.tagListToolStripMenuItem.Text = "查看标签";
+            this.tagListToolStripMenuItem.Click += new System.EventHandler(this.tagListToolStripMenuItem_Click);
             // 
             // HoverTreeSCJForm
             // 
@@ -127,6 +136,7 @@
         private System.Windows.Forms.ToolStripMenuItem tagAddToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem getScreenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tagListToolStripMenuItem;
     }
 }
 

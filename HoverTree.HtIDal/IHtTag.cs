@@ -10,5 +10,7 @@ namespace HoverTree.HtIDal
    public interface IHtTag
     {
         string Add(HtTagInfo tagInfo);
+
+        List<HtTagInfo> HtPageQuery(HtTagSelect select);
     }
 }

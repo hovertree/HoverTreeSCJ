@@ -19,7 +19,10 @@ namespace HoverTreeSCJ.SCJForms.TagForms
             h_tagInfo.HtTagName = textBox_tagName.Text;
            string h_result= HtTag.Add(h_tagInfo);
             if (h_result == "")
+            {
                 MessageBox.Show("添加成功!");
+                textBox_tagName.Clear();
+            }
             else
                 MessageBox.Show(h_result);
         }

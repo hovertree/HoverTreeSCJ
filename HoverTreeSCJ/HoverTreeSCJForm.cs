@@ -43,5 +43,12 @@ namespace HoverTreeSCJ
             h_from.MdiParent = this;
             h_from.Show();
         }
+
+        private void tagListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_TagList h_form = new Form_TagList();
+            h_form.MdiParent = this;
+            h_form.Show();
+        }
     }
 }
