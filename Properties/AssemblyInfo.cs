@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("HoverTreeSCJ")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("何问起收藏夹")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Hewlett-Packard")]
+[assembly: AssemblyCompany("HoverTree")]
 [assembly: AssemblyProduct("HoverTreeSCJ")]
-[assembly: AssemblyCopyright("版权所有(C) Hewlett-Packard 2016")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("版权所有(C) hovertree.com 2016")]
+[assembly: AssemblyTrademark("hovertree.top")]
 [assembly: AssemblyCulture("")]
 
 // 将 ComVisible 设置为 false 会使此程序集中的类型
