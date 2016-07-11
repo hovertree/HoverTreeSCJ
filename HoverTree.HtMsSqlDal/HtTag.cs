@@ -14,9 +14,14 @@ namespace HoverTree.HtMsSqlDal
         {
 
             string h_result = "";
+            string h_tagName = tagInfo.HtTagName.Trim();
 
-            if (tagInfo.HtTagName.Trim() == "")
+            if (h_tagName == "")
                 h_result = "标签名不能为空";
+
+            if (h_tagName.Length > 50)
+                return "标签名不能多于50个字符。";
+
             // CheckInfo(info);
 
             //if (Exist(info.HtUrl, info.HtULCase))
@@ -27,7 +32,7 @@ namespace HoverTree.HtMsSqlDal
 
             IDataParameter[] m_parameters = new SqlParameter[1];
             m_parameters[0] = new SqlParameter("@HtTagName", SqlDbType.NVarChar, 100);
-            m_parameters[0].Value = tagInfo.HtTagName.Trim();
+            m_parameters[0].Value = h_tagName;
             
 
             int m_returnCount;
@@ -85,6 +90,37 @@ namespace HoverTree.HtMsSqlDal
             h_info.HtAddTime = Convert.ToDateTime(htDataRow["HtAddTime"]);
 
             return h_info;
+        }
+
+        public HtTagInfo Get(int id)
+        {
+            IDataParameter[] m_parameters = new SqlParameter[1];
+            m_parameters[0] = new SqlParameter("@htid", SqlDbType.Int, 4);
+            m_parameters[0].Value = id;
+
+            DataRow h_dr;
+            h_dr = KeleyiSQLHelper.HoverTreeSql.RunProcedureDataRow("p_HoverTreeSCJ_Tag_Get", m_parameters);
+            return ConvertToInfo(h_dr);
+        }
+
+        public string Save(HtTagInfo info)
+        {
+            IDataParameter[] m_parameters = new SqlParameter[2];
+            m_parameters[0] = new SqlParameter("@htid", SqlDbType.Int, 4);
+            m_parameters[0].Value = info.HtId;
+            m_parameters[1] = new SqlParameter("@htTagName", SqlDbType.NVarChar, 100);
+            m_parameters[1].Value = info.HtTagName.Trim();
+            
+
+            int m_returnCount;
+
+            //执行结果等于1表示添加成功
+            m_returnCount = KeleyiSQLHelper.HoverTreeSql.RunProcedureWithReturn("p_HoverTreeSCJ_Tag_Save", m_parameters);
+
+            if (m_returnCount == 1)
+                return string.Empty;
+            else
+                return "保存失败 ";
         }
     }
 }

@@ -61,7 +61,14 @@
     <Compile Include="HTControls\HtUcPages.Designer.cs">
       <DependentUpon>HtUcPages.cs</DependentUpon>
     </Compile>
+    <Compile Include="HTControls\HtUcTagPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HTControls\HtUcTagPanel.Designer.cs">
+      <DependentUpon>HtUcTagPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="HtGlobal\Hotkey.cs" />
+    <Compile Include="HtGlobal\HtTempTagInfo.cs" />
     <Compile Include="HtGlobal\HtUrlGlobal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,6 +96,12 @@
     <Compile Include="SCJForms\TagForms\Form_TagAdd.Designer.cs">
       <DependentUpon>Form_TagAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="SCJForms\TagForms\Form_TagEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SCJForms\TagForms\Form_TagEdit.Designer.cs">
+      <DependentUpon>Form_TagEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="SCJForms\TagForms\Form_TagList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HTControls\HtUcPages.resx">
       <DependentUpon>HtUcPages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HTControls\HtUcTagPanel.resx">
+      <DependentUpon>HtUcTagPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -127,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SCJForms\TagForms\Form_TagAdd.resx">
       <DependentUpon>Form_TagAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SCJForms\TagForms\Form_TagEdit.resx">
+      <DependentUpon>Form_TagEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SCJForms\TagForms\Form_TagList.resx">
       <DependentUpon>Form_TagList.cs</DependentUpon>

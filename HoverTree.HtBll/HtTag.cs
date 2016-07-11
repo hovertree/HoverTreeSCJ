@@ -17,5 +17,15 @@ namespace HoverTree.HtBll
         {
             return dal.HtPageQuery(select);
         }
+
+        public static HtTagInfo Get(int id)
+        {
+           return dal.Get(id);
+        }
+
+        public static string Save(HtTagInfo info)
+        {
+            return dal.Save(info);
+        }
     }
 }

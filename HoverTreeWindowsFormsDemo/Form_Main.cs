@@ -22,6 +22,10 @@ namespace HoverTreeWindowsFormsDemo
             h_form.Show();
 
             h_form.BringToFront();
+
+            Form_listView2 h_form2 = new Form_listView2();
+            h_form2.MdiParent = this;
+            h_form2.Show();
         }
 
         private void showControlPanelToolStripMenuItem_Click(object sender, EventArgs e)

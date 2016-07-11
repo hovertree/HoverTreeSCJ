@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using HoverTree.HtBll;
 using HoverTree.HtModel;
+using System;
 
 namespace HoverTreeSCJ.SCJForms.TagForms
 {
@@ -11,7 +12,7 @@ namespace HoverTreeSCJ.SCJForms.TagForms
         public Form_TagList()
         {
             InitializeComponent();
-
+            listView_tags.View = View.Details;
             //listView_tags.Items.
         }
 
@@ -21,11 +22,12 @@ namespace HoverTreeSCJ.SCJForms.TagForms
             if (listView_tags.Items.Count > 0)
                 listView_tags.Items.Clear();
             ListViewItem h_item;
+
             foreach (HtTagInfo info in h_list)
             {
-                //h_item.
-                h_item = new ListViewItem();
-                listView_tags.Items.Add(info.HtTagName);
+                string[] h_subItems = { info.HtTagName, info.HtId.ToString(), info.HtAddTime.ToString() };
+                h_item = new ListViewItem(h_subItems);
+                listView_tags.Items.Add(h_item);
             }
             //dataGridView_htList.DataSource = h_list;
         }
@@ -40,6 +42,25 @@ namespace HoverTreeSCJ.SCJForms.TagForms
         {
             HtTagSelect h_select = new HtTagSelect();
             MyQuery(h_select);
+        }
+
+        private void listView_tags_ItemActivate(object sender, System.EventArgs e)
+        {
+
+            //ListViewItem h_item = (ListViewItem)sender;
+            //MessageBox.Show(h_item.Text);
+            if (listView_tags.SelectedItems.Count == 1)
+            {
+                //MessageBox.Show(listView_tags.SelectedItems[0].SubItems[1].Text);
+                Form_TagEdit h_editForm = new Form_TagEdit(Convert.ToInt32(listView_tags.SelectedItems[0].SubItems[1].Text));
+                //h_editForm.MdiParent = this.MdiParent;
+                if (h_editForm.ShowDialog() == DialogResult.OK)
+                {
+                    HtTagInfo h_tempInfo = HtTag.Get(Convert.ToInt32(listView_tags.SelectedItems[0].SubItems[1].Text));
+                    listView_tags.SelectedItems[0].Text = h_tempInfo.HtTagName;
+
+                }
+            }
         }
     }
 }

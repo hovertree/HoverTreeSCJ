@@ -12,5 +12,9 @@ namespace HoverTree.HtIDal
         string Add(HtTagInfo tagInfo);
 
         List<HtTagInfo> HtPageQuery(HtTagSelect select);
+
+        HtTagInfo Get(int id);
+
+        string Save(HtTagInfo info);
     }
 }

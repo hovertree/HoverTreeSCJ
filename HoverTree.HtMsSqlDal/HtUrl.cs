@@ -131,15 +131,12 @@ namespace HoverTree.HtMsSqlDal
 
         public UrlInfo Get(int id)
         {
-
             IDataParameter[] m_parameters = new SqlParameter[1];
             m_parameters[0] = new SqlParameter("@htid", SqlDbType.Int, 4);
             m_parameters[0].Value = id;
 
             DataRow h_dr;
-
             h_dr = KeleyiSQLHelper.HoverTreeSql.RunProcedureDataRow("p_HoverTreeSCJ_URLs_Get", m_parameters);
-
             return ConvertToInfo(h_dr);
         }
 
